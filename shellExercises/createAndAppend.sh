@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [ $# -ne 2 ]; then
-    echo "wrong syntax: createAndAppend fileName number";
+if [ $# -ne 3 ]; then
+    echo "wrong syntax: createAndAppend fileName number string";
     exit 1;
 fi
 
@@ -17,6 +17,6 @@ fi
 
 touch $1;
 for ((i = 0; i < $2; i++)); do
-    echo "test" >> $1;
+    echo $3 >> $1;
 done
 
